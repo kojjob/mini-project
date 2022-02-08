@@ -1,5 +1,2 @@
-Water
-Hot choco 
-tea
-Mango 
-Solidity 
+Mocha 
+Milk shake 
