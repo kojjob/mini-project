@@ -1,0 +1,4 @@
+customer_name ,customer_address       ,customer_phone ,customer_email ,courier ,status    ,products
+Kojo          ,"St.Peters 48, London" ,+44 88675309   ,cust@gmail.com ,2       ,preparing ,"[1, 2, 3]"
+Mary          ,"Menphis 230, Leeds"   ,+44 88675309   ,cus1@gmail.com ,3       ,preparing ,"[1, 2]"
+John          ,"Accra 37, Leeds"      ,+44 88675309   ,cus2@gmail.com ,2       ,preparing ,[1]

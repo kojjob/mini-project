@@ -1,7 +1,7 @@
 from products import *
 from couriers import *
+from orders import *
 from pyfiglet import Figlet
-
 
 
 def banner():
@@ -10,7 +10,6 @@ def banner():
 	print("""
 	      Welcome to GenCafe.	 
 			""")
-
 
 def product_menu():
   	while True:
@@ -25,10 +24,10 @@ def product_menu():
 				"""))
 
 				if product_menu_input == 1:
-						display_products()
+						read_products_from_db()
 									
 				if product_menu_input == 2:
-						create_product()		
+						add_product_to_db()		
 
 				if product_menu_input == 3:
 					delete_product()
@@ -38,7 +37,6 @@ def product_menu():
 
 				if product_menu_input == 0:
 					main_menu()
-
 
 def courier_menu():
   	while True:
@@ -53,10 +51,10 @@ def courier_menu():
 				"""))
 
 				if courier_menu_input == 1:
-						display_courier()			
+						read_couriers_from_db()			
 
 				if courier_menu_input == 2:
-						create_courier()			
+						add_courier_to_db()			
 
 				if courier_menu_input == 3:
 					delete_courier()
@@ -67,7 +65,7 @@ def courier_menu():
 				if courier_menu_input == 0:
 					main_menu()
 
-def order_menu():
+def orders_menu():
   	while True:
 				order_menu_input = int(input("""
 				Please choose an option: 
@@ -80,7 +78,7 @@ def order_menu():
 				"""))
 
 				if order_menu_input == 1:
-						print("Display orders here")			
+						enumerate_orders(csv_lists)			
 
 				if order_menu_input == 2:
 						print("Create a new order here")			
@@ -116,7 +114,7 @@ def main_menu():
 			
 			if main_menu_input == 3:
 					print("I am Order menu")
-					order_menu()
+					orders_menu()
 				
 			if main_menu_input == 0:
 					print("Thanks for coming.")
@@ -125,4 +123,4 @@ def main_menu():
 main_menu()
 product_menu()
 courier_menu()
-order_menu()
+orders_menu()
